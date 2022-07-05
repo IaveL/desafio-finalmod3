@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import * as S from "./styles"
-import solutions from "../Cards/solutions"
 import Card from "../Cards/index"
+import { Link } from "react-router-dom"
 export default function MainContainer() {
+
+  // const background = useRef("white")
+
+  // const darkMode = () => {
+  //   if (background.current.style.backgroundColor === "white") {
+  //     background.current.style.backgroundColor = "black"
+  //   } else {
+  //     background.current.style.backgroundColor = "white"
+  //   }
+  // }
+
   return (
     <S.Main>
       <S.IntroText>   
@@ -11,13 +22,26 @@ export default function MainContainer() {
             Sed massa lorem, fermentum eu ipsum eu, commodo convallis dolor. Aliquam ultrices rhoncus nisi, quis iaculis ipsum. Ut sed iaculis ligula. Nunc convallis rutrum pharetra. Curabitur ullamcorper, neque semper fermentum sollicitudin, ipsum massa pretium turpis, a tincidunt ipsum nisi eu est. Sed commodo risus non orci lobortis, nec iaculis purus auctor. Suspendisse sed dignissim nunc, in hendrer</p>
             </S.IntroText>
       <S.SolutionsContainer>
-        {solutions.map(item=>(
-          <Card
-            key={item.id} 
-            title={item.title}
-          />
-        ))}
+        {/* {solutions.map(item=>(
+          <Link to="/page1"><Card key={item.id} title={item.title}/></Link>
+        ))} */}
+        <Link to="/page1">
+          <Card title="Solução 1"/>
+        </Link>
+        <Link to="/page2">
+          <Card title="Solução 2"/>
+        </Link>
+        <Link to="/page3">
+          <Card title="Solução 3"/>
+        </Link>
+        <Link to="/page4">
+          <Card title="Solução 4"/>
+        </Link>
+        <Link to="/page5">
+          <Card title="Solução 5"/>
+        </Link>
       </S.SolutionsContainer>
+      {/* <button>Dark mode?</button> */}
     </S.Main>
   )
 }
