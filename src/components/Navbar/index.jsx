@@ -7,7 +7,7 @@ export default function Navbar() {
     <S.Navbar>
         <S.Nav>
             <Link to="/"> <li>Home</li> </Link>
-                <a href="google.com" target="_blank">Clica pro meu blog.</a>
+                <a href="https://igor-avelino-portfolio.netlify.app/" rel='noreferrer' target="_blank">Clica pro meu blog.</a>
         </S.Nav>
     </S.Navbar>
   )

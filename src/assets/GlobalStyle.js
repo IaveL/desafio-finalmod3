@@ -1,13 +1,15 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #FFEEEE;
+    * {
+      font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    body {
+      background-color: rgb(255, 238, 238);
+
     }
     li {
         list-style-type: none;
@@ -18,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
     }
     a {
       text-decoration: none;
+    }
+    a:link {
+      color: inherit;
     }
   ` 
 export default GlobalStyle
